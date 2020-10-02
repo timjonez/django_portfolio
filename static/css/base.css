@@ -1,14 +1,17 @@
+html, body{
+  font-family: 'Source Code Pro', monospace;
+}
+
 .typing { 
     box-shadow: .2em 0 0 black;
-    margin: 2rem 1rem;
-    width: 10ch;
+    width: 17ch;
     overflow: hidden;
     color: black;
     white-space: nowrap;
+    text-align: center;
     animation: caret .5s step-end infinite alternate,
-             type 5s steps(8, end)
+             type 2s steps(17, end);
 }
-
 
 
 @keyframes type {
