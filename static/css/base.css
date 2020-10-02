@@ -1,5 +1,6 @@
 html, body{
   font-family: 'Source Code Pro', monospace;
+  height: 100%;
 }
 
 .typing { 
@@ -24,4 +25,23 @@ html, body{
   50% { 
     box-shadow: .6em 0 0 transparent;
   }
+}
+
+.info-section{
+  background-color: #FDFDFD;
+  position: sticky;
+  top: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  box-shadow: 0px 0.5px 10px gray;
+}
+
+.nav-list{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  list-style-type: none;
+}
+
+.main{
+  height: 80% !important;
 }
