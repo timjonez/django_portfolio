@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block body %}
 <div class="container mx-auto row d-table main">
     <div class="ml-auto text-center d-table-cell align-middle">
         <h1>Tim Jones</h1>
+        <i class="fas fa-align-center"></i>
         <div class="row">
             <div class="col-0 col-md-3 mr-0 mr-md-3"></div>
             <div class="col-md-5 col-12">
@@ -11,5 +13,37 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container text-center">
+    <img class="down-arrow" src="{% static 'images/down_arrow.svg'%}" alt="">
+</div>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3">
+        {% for project in project_list %}
+        <div class="col mb-4">
+          <div class="card">
+            <img src="{{ project.picture.url }}" class="card-img-top" alt="{{project.title}}">
+            <div class="card-body">
+              <h5 class="card-title">{{project.title}}</h5>
+              <p class="card-text">{{project.intro}}</p>
+              <a class="btn btn-secondary btn-lg btn-block" data-toggle="collapse" href="#{{ project.title|cut:" "}}" role="button">
+                  See Details
+            </a>
+            </div>
+          </div>
+          <div class="collapse" id="{{ project.title|cut:" "}}">
+            <div class="popup-container">
+                <div class="col-md-7 col-sm-12 popup-body">
+                    <a class='right' data-toggle="collapse" href="#{{ project.title|cut:" "}}">
+                        <i class="fas fa-times fa-2x"></i>
+                    </a>
+                    <h3 class="card-title title">{{ project.title}}</h3>
+                    <p class="card-text">{{ project.body }}</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+      </div>
 </div>
 {% endblock %}
