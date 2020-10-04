@@ -71,6 +71,11 @@ html, body{
   text-align: center;
 }
 
+.project-card{
+  background-color:  #FDFDFD;
+  box-shadow: 0px 0.5px 10px gray;
+}
+
 .popup-container{
   position: fixed;
   top: 0;
