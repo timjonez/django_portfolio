@@ -39,12 +39,25 @@
                         <i class="fas fa-times fa-2x"></i>
                     </a>
                     <h3 class="card-title title">{{ project.title}}</h3>
-                    <p class="card-text">{{ project.body }}</p>
+                    <div class="row">
+                        <div class="col-8">
+                            <p class="card-text mx-2">{{ project.body }}</p>
+                            <a href="{{ project.demo }}" class="btn btn-secondary">Live Demo</a>
+                            <a href="{{ project.github }}" class="btn btn-secondary">Source Code</a>
+                        </div>
+                        <div class="col-4">
+                            <ul>
+                                {% for item in project.tech %}
+                                    <li>{{item}}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         </div>
         {% endfor %}
-      </div>
+      </div> 
 </div>
 {% endblock %}
