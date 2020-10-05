@@ -18,7 +18,7 @@
         <img class="down-arrow project-scroll" src="{% static 'images/down_arrow2.png'%}" alt="">
     </a>
 </div>
-<div class="container" id="projects">
+<div class="container mb-5" id="projects">
     <div class="row row-cols-1 row-cols-md-3">
         {% for project in project_list %}
         <div class="col mb-4">
@@ -35,7 +35,7 @@
           <div class="collapse" id="{{ project.title|cut:" "}}">
             <div class="popup-container">
                 <div class="col-md-7 col-sm-12 popup-body">
-                    <a class='right' data-toggle="collapse" href="#{{ project.title|cut:" "}}">
+                    <a class='right close' data-toggle="collapse" href="#{{ project.title|cut:" "}}">
                         <i class="fas fa-times fa-2x"></i>
                     </a>
                     <h3 class="card-title title">{{ project.title}}</h3>
