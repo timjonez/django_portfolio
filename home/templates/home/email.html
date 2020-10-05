@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block body %}
+<div class="container">
+    <form method="POST" class="w-50 mx-auto">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <div>
+            <button type="submit" class="btn btn-secondary">Send</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
