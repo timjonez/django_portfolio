@@ -112,3 +112,10 @@ html, body{
 .info-link{
   color: black;
 }
+
+.back-arrow{
+  position: sticky;
+  margin-left: 20px;
+  top: 115px;
+  color: black;
+}
