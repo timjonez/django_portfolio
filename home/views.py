@@ -21,10 +21,10 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             from_email = form.cleaned_data['from_email']
-            subject = form.cleaned_data['subject']
+            subject = form.cleaned_data['subject'] + ' ' + from_email
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, from_email, ['timjonez@protonmail.com'])
+                send_mail(subject, message, 'contact@timjones.tech', ['timjonez@protonmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header')
             return redirect('success/')
