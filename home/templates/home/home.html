@@ -42,8 +42,10 @@
                     <div class="row">
                         <div class="col-8">
                             <p class="card-text mx-2">{{ project.body }}</p>
-                            <a href="{{ project.demo }}" class="btn btn-secondary">Live Demo</a>
-                            <a href="{{ project.github }}" class="btn btn-secondary">Source Code</a>
+                            {% if project.demo != ""%}
+                                <a href="{{ project.demo }}" class="btn btn-secondary" target="_blank">Live Demo</a>
+                            {% endif %}
+                            <a href="{{ project.github }}" class="btn btn-secondary" target="_blank">Source Code</a>
                         </div>
                         <div class="col-4">
                             <ul>
