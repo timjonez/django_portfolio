@@ -4,6 +4,15 @@ html, body{
   scroll-behavior: smooth;
 }
 
+.typing-container{
+  display: flex;
+  justify-content: center;
+}
+
+.typing-box{
+  width: 420px;
+}
+
 .typing { 
     box-shadow: .2em 0 0 black;
     width: 17ch;
