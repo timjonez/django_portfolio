@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Project(models.Model):
+    priority = models.IntegerField(null=True, blank=True)
     title = models.CharField(max_length=100)
     intro = models.CharField(max_length=200)
     body = models.TextField()
@@ -12,3 +13,6 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ('priority',)
